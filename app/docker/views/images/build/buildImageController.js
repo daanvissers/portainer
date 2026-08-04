@@ -7,6 +7,7 @@ angular.module('portainer.docker').controller('BuildImageController', BuildImage
 function BuildImageController($scope, $async, $window, BuildService, Notifications, HttpRequestHelper, endpoint) {
   $scope.endpoint = endpoint;
   $scope.options = [editor, upload, url];
+  $scope.buildLogAutoScroll = true;
 
   $scope.state = {
     BuildType: 'editor',
@@ -14,6 +15,7 @@ function BuildImageController($scope, $async, $window, BuildService, Notificatio
     activeTab: 0,
     isEditorDirty: false,
   };
+
 
   $scope.formValues = {
     ImageNames: [{ Name: '', Valid: false, Unique: true }],

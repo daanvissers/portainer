@@ -89,6 +89,7 @@ class KubernetesStackLogsController {
 
   async onInit() {
     this.state = {
+      autoScroll: true,
       autoRefresh: false,
       refreshRate: 30000, // 30 seconds
       search: '',

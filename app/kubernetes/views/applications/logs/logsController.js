@@ -57,6 +57,7 @@ class KubernetesApplicationLogsController {
 
   async onInit() {
     this.state = {
+      autoScroll: true,
       autoRefresh: false,
       refreshRate: 5000, // 5 seconds
       search: '',
